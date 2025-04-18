@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hero</title>
+</head>
+<body>
+<table>
+<caption>
+  LOL Hero Table
+</caption>
+   <thead>
+-  <tr>
+     <th scope="col">id</th>
+     <th scope="col">name</th>
+     <th scope="col">position</th>
+     <th scope="col">hp</th>
+     <th scope="col">level</th>
+     <th scope="col">nickname</th>
+
+   </tr>
+   </thead>
+  <tr th:each="heroes : ${heroes}">
+    <td th:text="${heroes.id}"></td>
+    <td th:text="${heroes.name}"></td>
+    <td th:text="${heroes.position}"></td>
+    <td th:text="${heroes.hp}"></td>
+    <td th:text="${heroes.level}"></td>
+    <td th:text="${heroes.nickname}"></td>
+
+  </tr>
+</table>
+</body>
+</html>
